@@ -1,0 +1,34 @@
+<h1>HOME</h1>
+
+<div ng-controller="MainCtrl">
+  <form ng-submit="formSubmit()">
+    <input type="number" ng-model="age">
+    <input type="text" ng-model="state"> <br>
+    <input type="radio" name="group1" ng-model="hateType" value="G" checked> Gun <br>
+    <input type="radio" name="group1" ng-model="hateType" value="T"> Taser <br>
+    <input type="radio" name="group1" ng-model="hateType" value="R"> Restraint <br>
+    <input type="radio" name="group1" ng-model="hateType" value="C"> Chemical <br>
+    <input type="radio" name="group1" ng-model="hateType" value="V"> Vehicle <br>
+    <input type="radio" name="group1" ng-model="hateType" value="O"> Other <br>
+    <input type="submit">
+    <p>{{newUser}}</p>
+  </form>
+
+  <!-- Accordian -->
+
+  <uib-accordion>
+    <div uib-accordion-group ng-if="crime.victim" class="panel-default" heading="{{crime.victim}} – {{crime.age}}" ng-repeat="crime in crimes track by crime._id">
+      <ul class="list-unstyled">
+        <li>Date: {{crime.date}}</li>
+        <li>State: {{crime.State}}</li>
+        <li>CrimeType: {{crime.type}}</li>
+        <li>Genrace: {{crime.genrace}}</li>
+        <li><a href="{{crime.kbplink}}" target='_blank'>Facebook</a></li>
+        <li><a href="{{crime.newslink}}" target='_blank'>NewsPage</a></li>
+      </ul>
+    </div>
+  </uib-accordion>
+
+  <!-- Accordian End -->
+
+</div>
