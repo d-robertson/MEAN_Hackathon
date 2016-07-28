@@ -1,0 +1,56 @@
+<div ng-controller="MainCtrl">
+
+  <div class="main-img">
+    <div class="position-parent">
+      <div class="position-child">Homocides By Police</div>
+    </div>
+    <div>
+      <img src="img/bg.jpg" class="img-responsive" alt="Image">
+    </div>
+  </div>
+
+  <div class="row info-box box-height">
+    <div class="flex-h box-height col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, quidem velit veniam unde dolorem, maiores deleniti explicabo dicta earum facilis necessitatibus ullam quis quaerat expedita ex suscipit magnam iste vel.</p>
+    </div>
+    <div class="flex-v box-height col-xs-6 col-sm-6 col-md-6 col-lg-6">
+
+      <form class="form-group" ng-submit="formSubmit()">
+        <div class="radio"><input type="radio" name="group1" ng-model="hateType" value="G" checked> Gun</div>
+        <div class="radio"><input type="radio" name="group1" ng-model="hateType" value="T"> Taser</div>
+        <div class="radio"><input type="radio" name="group1" ng-model="hateType" value="R"> Restraint</div>
+        <div class="radio"><input type="radio" name="group1" ng-model="hateType" value="C"> Chemical</div>
+        <div class="radio"><input type="radio" name="group1" ng-model="hateType" value="V"> Vehicle</div>
+        <div class="radio"><input type="radio" name="group1" ng-model="hateType" value="O"> Other</div><br>
+        <div class="text-center">
+          <input class="input" type="number" placeholder="Age" ng-model="age">
+          <input class="input" type="text" placeholder="State" ng-model="state">
+          <input type="submit" class="btn btn-submit">
+        </div>
+        <p>{{newUser}}</p>
+      </form>
+
+    </div>
+  </div>
+  <div class="row result-box">
+
+    <!-- Accordian -->
+
+    <uib-accordion>
+      <div uib-accordion-group ng-if="crime.victim" class="panel-default" heading="{{crime.victim}} – {{crime.age}}" ng-repeat="crime in crimes track by crime._id">
+        <ul class="list-unstyled">
+          <li><h4>{{crime.date}}</h4></li>
+          <li>State: <b>{{crime.State}}</b></li>
+          <li>CrimeType: <b>{{crime.type}}</b></li>
+          <li>Gender & Race: <b>{{crime.genrace}}</b></li>
+          <li><a href="{{crime.kbplink}}" target='_blank'>Facebook</a></li>
+          <li><a href="{{crime.newslink}}" target='_blank'>NewsPage</a></li>
+        </ul>
+      </div>
+    </uib-accordion>
+
+    <!-- Accordian End -->
+
+  </div>
+
+</div>
