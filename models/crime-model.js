@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var storySchema = new mongoose.Schema({
+var crimeSchema = new mongoose.Schema({
   date: String,
   state: String,
   genrace: String,
@@ -11,6 +11,6 @@ var storySchema = new mongoose.Schema({
   newslink: String
 })
 
-var Story = mongoose.model('Story', storySchema);
+var crimes = mongoose.model('crimes', crimeSchema);
 
-module.exports = Story;
+module.exports = crimes;
