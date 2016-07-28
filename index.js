@@ -1,7 +1,15 @@
 var express = require('express');
+var path = require('path');
 var app = express();
 
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/policeDB');
+
+app.use(express.static(__dirname + '/public/'));
+
 app.use(require('morgan')('dev'));
+
+app.use('/api/stories', require('.controllers/stories'));
 
 app.get('/', function(req, res) {
   res.send('Hello Backend!');
