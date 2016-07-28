@@ -1,0 +1,87 @@
+/* -------- Globals ------ */
+
+body {
+  background: url('../img/zwartevilt.png');
+}
+
+.flex-v {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-h {
+  display: flex;
+  justify-content: center;
+}
+
+/*---------- Main -------- */
+
+.box-height {
+  min-height: 200px;
+}
+
+.info-box {
+  background-color: #3d4344;
+  border-radius: 10px;
+  margin: 20px;
+  margin-top: 40px;
+}
+
+.result-box {
+  margin: 0px 20px 20px 20px;
+  border-radius: 10px;
+  /*background-color: #dadacf;*/
+  /*min-height: 50px;*/
+}
+
+.paragraph {
+  padding: 25px;
+  max-width: 500px;
+  color: #d4d4d4;
+}
+
+/* ------------ Form ------------ */
+
+.input {
+  width: 50px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.radio {
+  display: inline-block;
+  min-width: 100px;
+  margin-left: 20px;
+  color: #d4d4d4;
+  /*margin-right: 20px;*/
+}
+
+.btn {
+  height: 28px;
+}
+
+/* ------------ Title ------------ */
+
+.position-parent {
+  position: relative;
+}
+
+.position-child {
+  position: absolute;
+  text-align: center;
+  /*margin: 0 auto;*/
+  width: 100%;
+  margin-top: 20%;
+  color: white;
+  font-size: 48pt;
+  text-shadow: 1px 1px 2px black;
+}
+
+/* ------------ Results ------------ */
+
+.panel-group {
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto;
+}
