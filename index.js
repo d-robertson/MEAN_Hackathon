@@ -3,7 +3,7 @@ var path = require('path');
 var app = express();
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/policeDB');
+mongoose.connect('mongodb://localhost/crime');
 
 app.use(express.static(__dirname + '/public/'));
 
